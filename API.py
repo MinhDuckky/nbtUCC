@@ -1,5 +1,8 @@
 import requests
 import json
+import os
+import sys
+
 
 endpoint = 'https://api.openweathermap.org/data/2.5/forecast'
 apikey = input('Enter API key: ')
@@ -46,8 +49,7 @@ for forecast in data["list"]:
     copy = dict.copy()
     list.append(copy)
 
-print(list)
-with open('data.json', 'w') as outfile:
+with open(os.path.join(sys.path[0], "data.json"), "w") as outfile:
     json.dump(list, outfile)
 
 
