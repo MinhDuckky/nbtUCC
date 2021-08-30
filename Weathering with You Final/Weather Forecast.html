@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WEATHER FORECAST</title>
+</head>
+<html>
+<body>
+
+<h1 style="text-align:center; color: #660066">WEATHER FORECAST THE NEXT 5 DAYS IN HA NOI (VN)</h1>
+
+  <table style="width: 100%; text-align: center">
+
+    <tr id="weekdays" style="background-color: silver; font-size: 30px">
+    </tr>
+
+    <tr id="forecast" style="vertical-align: top; background-color: powderblue; font-size: 17px">
+    </tr>
+ 
+  </table>
+
+<script>
+const json = JSON.stringify([{"min": "26.45\u00b0C", "max": "28.15\u00b0C", "feel": "32.32\u00b0C", "cloud": "65%", "humid": "79%", "weather": "BROKEN CLOUDS", "icon": "04n", "wind": "2.89 km/h", "date": "30-08-2021", "time": "15:00:00"}, {"min": "25.92\u00b0C", "max": "26.95\u00b0C", "feel": "30.1\u00b0C", "cloud": "73%", "humid": "85%", "weather": "BROKEN CLOUDS", "icon": "04n", "wind": "1.69 km/h", "date": "30-08-2021", "time": "18:00:00"}, {"min": "25.3\u00b0C", "max": "25.3\u00b0C", "feel": "26.31\u00b0C", "cloud": "83%", "humid": "93%", "weather": "LIGHT RAIN", "icon": "10n", "wind": "1.32 km/h", "date": "30-08-2021", "time": "21:00:00"}, {"min": "26.53\u00b0C", "max": "26.53\u00b0C", "feel": "26.53\u00b0C", "cloud": "80%", "humid": "88%", "weather": "BROKEN CLOUDS", "icon": "04d", "wind": "0.95 km/h", "date": "31-08-2021", "time": "00:00:00"}, {"min": "30.03\u00b0C", "max": "30.03\u00b0C", "feel": "35.86\u00b0C", "cloud": "94%", "humid": "73%", "weather": "LIGHT RAIN", "icon": "10d", "wind": "2.09 km/h", "date": "31-08-2021", "time": "03:00:00"}, {"min": "33.31\u00b0C", "max": "33.31\u00b0C", "feel": "39.22\u00b0C", "cloud": "95%", "humid": "57%", "weather": "LIGHT RAIN", "icon": "10d", "wind": "2.54 km/h", "date": "31-08-2021", "time": "06:00:00"}, {"min": "31.2\u00b0C", "max": "31.2\u00b0C", "feel": "36.93\u00b0C", "cloud": "87%", "humid": "66%", "weather": "LIGHT RAIN", "icon": "10d", "wind": "3.67 km/h", "date": "31-08-2021", "time": "09:00:00"}, {"min": "27.69\u00b0C", "max": "27.69\u00b0C", "feel": "31.34\u00b0C", "cloud": "71%", "humid": "80%", "weather": "BROKEN CLOUDS", "icon": "04n", "wind": "3.8 km/h", "date": "31-08-2021", "time": "12:00:00"}, {"min": "26.09\u00b0C", "max": "26.09\u00b0C", "feel": "26.09\u00b0C", "cloud": "80%", "humid": "85%", "weather": "LIGHT RAIN", "icon": "10n", "wind": "2.84 km/h", "date": "31-08-2021", "time": "15:00:00"}, {"min": "25.56\u00b0C", "max": "25.56\u00b0C", "feel": "26.47\u00b0C", "cloud": "84%", "humid": "88%", "weather": "LIGHT RAIN", "icon": "10n", "wind": "1.98 km/h", "date": "31-08-2021", "time": "18:00:00"}, {"min": "25.23\u00b0C", "max": "25.23\u00b0C", "feel": "26.13\u00b0C", "cloud": "59%", "humid": "89%", "weather": "BROKEN CLOUDS", "icon": "04n", "wind": "1.06 km/h", "date": "31-08-2021", "time": "21:00:00"}, {"min": "26.43\u00b0C", "max": "26.43\u00b0C", "feel": "26.43\u00b0C", "cloud": "62%", "humid": "87%", "weather": "BROKEN CLOUDS", "icon": "04d", "wind": "1.28 km/h", "date": "01-09-2021", "time": "00:00:00"}, {"min": "29.93\u00b0C", "max": "29.93\u00b0C", "feel": "35.11\u00b0C", "cloud": "87%", "humid": "71%", "weather": "LIGHT RAIN", "icon": "10d", "wind": "1.58 km/h", "date": "01-09-2021", "time": "03:00:00"}, {"min": "31.72\u00b0C", "max": "31.72\u00b0C", "feel": "37.62\u00b0C", "cloud": "79%", "humid": "64%", "weather": "LIGHT RAIN", "icon": "10d", "wind": "2.77 km/h", "date": "01-09-2021", "time": "06:00:00"}, {"min": "31.01\u00b0C", "max": "31.01\u00b0C", "feel": "37.03\u00b0C", "cloud": "61%", "humid": "68%", "weather": "LIGHT RAIN", "icon": "10d", "wind": "3.18 km/h", "date": "01-09-2021", "time": "09:00:00"}, {"min": "27.54\u00b0C", "max": "27.54\u00b0C", "feel": "31.23\u00b0C", "cloud": "36%", "humid": "82%", "weather": "SCATTERED CLOUDS", "icon": "03n", "wind": "2.86 km/h", "date": "01-09-2021", "time": "12:00:00"}, {"min": "26.21\u00b0C", "max": "26.21\u00b0C", "feel": "26.21\u00b0C", "cloud": "8%", "humid": "88%", "weather": "CLEAR SKY", "icon": "01n", "wind": "2.06 km/h", "date": "01-09-2021", "time": "15:00:00"}, {"min": "25.53\u00b0C", "max": "25.53\u00b0C", "feel": "26.51\u00b0C", "cloud": "31%", "humid": "91%", "weather": "SCATTERED CLOUDS", "icon": "03n", "wind": "1.18 km/h", "date": "01-09-2021", "time": "18:00:00"}, {"min": "25.01\u00b0C", "max": "25.01\u00b0C", "feel": "25.97\u00b0C", "cloud": "63%", "humid": "92%", "weather": "BROKEN CLOUDS", "icon": "04n", "wind": "1.15 km/h", "date": "01-09-2021", "time": "21:00:00"}, {"min": "26.48\u00b0C", "max": "26.48\u00b0C", "feel": "26.48\u00b0C", "cloud": "72%", "humid": "86%", "weather": "BROKEN CLOUDS", "icon": "04d", "wind": "0.42 km/h", "date": "02-09-2021", "time": "00:00:00"}, {"min": "30.97\u00b0C", "max": "30.97\u00b0C", "feel": "36.08\u00b0C", "cloud": "77%", "humid": "65%", "weather": "LIGHT RAIN", "icon": "10d", "wind": "1.52 km/h", "date": "02-09-2021", "time": "03:00:00"}, {"min": "33.6\u00b0C", "max": "33.6\u00b0C", "feel": "38.18\u00b0C", "cloud": "67%", "humid": "52%", "weather": "LIGHT RAIN", "icon": "10d", "wind": "2.05 km/h", "date": "02-09-2021", "time": "06:00:00"}, {"min": "31.91\u00b0C", "max": "31.91\u00b0C", "feel": "37.47\u00b0C", "cloud": "66%", "humid": "62%", "weather": "BROKEN CLOUDS", "icon": "04d", "wind": "3.73 km/h", "date": "02-09-2021", "time": "09:00:00"}, {"min": "28.05\u00b0C", "max": "28.05\u00b0C", "feel": "31.76\u00b0C", "cloud": "82%", "humid": "77%", "weather": "BROKEN CLOUDS", "icon": "04n", "wind": "3.97 km/h", "date": "02-09-2021", "time": "12:00:00"}, {"min": "26.82\u00b0C", "max": "26.82\u00b0C", "feel": "29.43\u00b0C", "cloud": "95%", "humid": "81%", "weather": "OVERCAST CLOUDS", "icon": "04n", "wind": "2.91 km/h", "date": "02-09-2021", "time": "15:00:00"}, {"min": "25.73\u00b0C", "max": "25.73\u00b0C", "feel": "26.6\u00b0C", "cloud": "71%", "humid": "86%", "weather": "BROKEN CLOUDS", "icon": "04n", "wind": "2.43 km/h", "date": "02-09-2021", "time": "18:00:00"}, {"min": "25.22\u00b0C", "max": "25.22\u00b0C", "feel": "26.12\u00b0C", "cloud": "16%", "humid": "89%", "weather": "FEW CLOUDS", "icon": "02n", "wind": "1.74 km/h", "date": "02-09-2021", "time": "21:00:00"}, {"min": "26.61\u00b0C", "max": "26.61\u00b0C", "feel": "26.61\u00b0C", "cloud": "39%", "humid": "84%", "weather": "SCATTERED CLOUDS", "icon": "03d", "wind": "1.53 km/h", "date": "03-09-2021", "time": "00:00:00"}, {"min": "30.74\u00b0C", "max": "30.74\u00b0C", "feel": "36.35\u00b0C", "cloud": "56%", "humid": "68%", "weather": "LIGHT RAIN", "icon": "10d", "wind": "2.36 km/h", "date": "03-09-2021", "time": "03:00:00"}, {"min": "33.06\u00b0C", "max": "33.06\u00b0C", "feel": "38.62\u00b0C", "cloud": "78%", "humid": "57%", "weather": "LIGHT RAIN", "icon": "10d", "wind": "3.47 km/h", "date": "03-09-2021", "time": "06:00:00"}, {"min": "31.63\u00b0C", "max": "31.63\u00b0C", "feel": "37.71\u00b0C", "cloud": "99%", "humid": "65%", "weather": "LIGHT RAIN", "icon": "10d", "wind": "4.21 km/h", "date": "03-09-2021", "time": "09:00:00"}, {"min": "28.02\u00b0C", "max": "28.02\u00b0C", "feel": "31.99\u00b0C", "cloud": "70%", "humid": "79%", "weather": "LIGHT RAIN", "icon": "10n", "wind": "4.26 km/h", "date": "03-09-2021", "time": "12:00:00"}, {"min": "26.76\u00b0C", "max": "26.76\u00b0C", "feel": "29.71\u00b0C", "cloud": "12%", "humid": "86%", "weather": "FEW CLOUDS", "icon": "02n", "wind": "2.92 km/h", "date": "03-09-2021", "time": "15:00:00"}, {"min": "25.32\u00b0C", "max": "25.32\u00b0C", "feel": "26.36\u00b0C", "cloud": "18%", "humid": "94%", "weather": "MODERATE RAIN", "icon": "10d", "wind": "2.57 km/h", "date": "03-09-2021", "time": "18:00:00"}, {"min": "25.28\u00b0C", "max": "25.28\u00b0C", "feel": "26.34\u00b0C", "cloud": "38%", "humid": "95%", "weather": "LIGHT RAIN", "icon": "10d", "wind": "1.86 km/h", "date": "03-09-2021", "time": "21:00:00"}, {"min": "26.74\u00b0C", "max": "26.74\u00b0C", "feel": "29.83\u00b0C", "cloud": "26%", "humid": "88%", "weather": "SCATTERED CLOUDS", "icon": "03d", "wind": "1.24 km/h", "date": "04-09-2021", "time": "00:00:00"}, {"min": "31.23\u00b0C", "max": "31.23\u00b0C", "feel": "37.6\u00b0C", "cloud": "77%", "humid": "68%", "weather": "LIGHT RAIN", "icon": "10d", "wind": "2.71 km/h", "date": "04-09-2021", "time": "03:00:00"}, {"min": "33.09\u00b0C", "max": "33.09\u00b0C", "feel": "39.75\u00b0C", "cloud": "87%", "humid": "60%", "weather": "LIGHT RAIN", "icon": "10d", "wind": "3.68 km/h", "date": "04-09-2021", "time": "06:00:00"}, {"min": "32.06\u00b0C", "max": "32.06\u00b0C", "feel": "38.82\u00b0C", "cloud": "98%", "humid": "65%", "weather": "LIGHT RAIN", "icon": "10d", "wind": "4.19 km/h", "date": "04-09-2021", "time": "09:00:00"}, {"min": "27.85\u00b0C", "max": "27.85\u00b0C", "feel": "32.17\u00b0C", "cloud": "80%", "humid": "83%", "weather": "LIGHT RAIN", "icon": "10d", "wind": "3.54 km/h", "date": "04-09-2021", "time": "12:00:00"}]);
+const data = JSON.parse(json);
+
+const temp = [];
+for (var i = 0; i < data.length; i++) {
+  temp.push(data[i].date);  
+}
+
+const date = temp.filter((item, i, ar) => ar.indexOf(item) === i);
+
+var weekday = new Array(7);
+weekday[0] = "Sunday";
+weekday[1] = "Monday";
+weekday[2] = "Tuesday";
+weekday[3] = "Wednesday";
+weekday[4] = "Thursday";
+weekday[5] = "Friday";
+weekday[6] = "Saturday";
+
+const day = [];
+for (var i = 0; i < date.length; i++) {
+  let d1 = date[i].split("-");
+  let d2 = d1[2]+"-"+d1[1]+"-"+d1[0];
+  let d = new Date(d2);
+  day.push(weekday[d.getDay()]);
+}
+
+for (var i = 0; i < day.length; i++) {
+  weekdays.innerHTML += "<th><br>"+ day[i] + "<br><br></th>" ;  
+}
+
+
+for (var i = 0; i < date.length; i++) {
+  let string = "<br>";
+  for (var j = 0; j < data.length; j++){
+    if (data[j].date === date[i]){
+      string += "<img src= http://openweathermap.org/img/wn/" + data[j].icon + "@2x.png alt='icon'><br>" + data[j].date + " | " + data[j].time + "<br>" + data[j].weather + "<br>Temp: " + data[j].min + " - " + data[j].max + "<br>Feels like: " + data[j].feel + "<br>Clouds: " + data[j].cloud + "<br>Humidity: " + data[j].humid + "<br>Wind: " + data[j].wind + "<br><br><br>";
+    }
+  }
+  forecast.innerHTML += "<td>" + string + "</td>";
+}
+
+</script>
+
+</body>
+</html>
